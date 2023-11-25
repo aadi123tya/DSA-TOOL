@@ -1,0 +1,22 @@
+public static int[] leftSumArray(int arr[])
+ {  
+        int n = arr.length;
+        int left[]= new int[n];
+        for(int i=1;i<n;i++)
+        {
+            left[i] = left[i-1]+nums[i];
+        }
+        return left;
+}
+
+
+public static int[] rightSumArray(int arr[])
+ {  
+        int n = arr.length;
+        int right[]= new int[n];
+        for(int i=n-2;i>=0;i--)
+        {
+            right[i] = right[i+1]+nums[i];
+        }
+        return right;
+}

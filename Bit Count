@@ -1,0 +1,27 @@
+//----------------------- OPTIMISED APPROACH (BIT MANIPULATION)--------------------
+// 1=> here we calculate the "&" between current and previous number;
+// 2=> regularly increase the count till 'n' not equal to zero.
+         int bitCount =0;
+         while(n!=0)
+         {
+             bitCount++;
+             n = n&(n-1);
+         }
+         return bitCount;
+
+//------------------------CONVERSION OF INT TO BINARYSTRING .-----------------------
+====> String s =Integer.toBinaryString(n);
+
+//-------------------------INBUILT FUNCTION ----------------------------------------
+====>  int count =Integer.bitCount(n);
+
+// ---------------------- ADD LOOP AND COUNT---------------------------------------
+
+        int bit = 0;
+        int mask = 1;
+
+        for (int i = 0; i < 32; i++) {
+            if ((n & mask) != 0) bit++;
+            mask = mask << 1;
+        }
+        return bit;

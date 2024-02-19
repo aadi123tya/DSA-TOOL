@@ -1,0 +1,20 @@
+// POWER OF TWO
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        if(n<0)return false;
+        int power =0;
+        int  m = n;
+        while(n!=0)
+        {
+            n = n>>1;
+           if(n!=0) {power+=1;}
+        }
+        int x = pow(2,power);
+        return (x==m)?true:false;
+        
+    }
+};
+
+
+// POWER OF THREE

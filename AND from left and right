@@ -1,0 +1,19 @@
+=> first both number are right shifted by 1 until both are equal.
+=> regular increase the count {to count how much you shifted}.
+=> if(both are equal than you shift the left at left by count.
+
+
+class Solution {
+public:
+    int rangeBitwiseAnd(int left, int right) {
+        int count =0;
+        while(left!=right)
+        {
+            left>>=1;
+            right>>=1;
+            count++;
+        }
+        return (left<<count);
+        
+    }
+};

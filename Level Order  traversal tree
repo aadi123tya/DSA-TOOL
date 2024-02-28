@@ -1,0 +1,88 @@
+CPP CODE
+********
+// Utility function to create a new tree node
+Node* newNode(int data)
+{
+    Node* temp = new Node;
+    temp->data = data;
+    temp->left = temp->right = NULL;
+    return temp;
+}
+
+
+void printLevelOrder(Node* root)
+{
+    
+    if (root == NULL)
+        return;
+ 
+    
+    queue<Node*> q;
+ 
+    q.push(root);
+ 
+    while (!q.empty()) {
+         
+        Node* node = q.front();
+        cout << node->data << " ";
+        q.pop();
+ 
+        if (node->left != NULL)
+            q.push(node->left);
+ 
+        if (node->right != NULL)
+            q.push(node->right);
+    }
+}
+
+JAVA CODE 
+*********
+
+// Utility function to create a new tree node
+
+    static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        public TreeNode(int val) {
+            this.val = val;
+            left = null;
+            right = null;
+        }
+    }
+
+
+
+
+
+ public static void levelORDER(TreeNode root) {
+        Queue<TreeNode> q = new LinkedList<>();
+        ArrayList<ArrayList<Integer>> v = new ArrayList<>();
+        q.add(root);
+        q.add(null);
+
+        while (!q.isEmpty()) {
+            TreeNode node = q.remove();
+            if (node == null) {
+
+                if (q.isEmpty())
+                    break;
+                else
+                    q.add(null);
+            } else {
+                if (node.left != null)
+                    q.add(node.left);
+                if (node.right != null)
+                    q.add(node.right);
+            }
+
+        }
+
+
+    }
+
+ 
+
+
+ 

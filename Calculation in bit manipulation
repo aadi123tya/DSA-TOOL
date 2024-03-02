@@ -1,0 +1,29 @@
+SQUARE OF NUMBER
+****************
+vector<int> v;
+   
+        int x=0;
+        if(val%2!=0)
+        {
+            int hlf_val = val>>1;
+            x = pow(hlf_val,2);
+            x=x<<2;
+            x +=( (hlf_val)<<2)+1;
+            v.push_back(x);
+
+        }
+        else{
+            int hlf_val = val>>1;
+            x = pow(hlf_val,2);
+            x=x<<2;
+            v.push_back(x);
+
+            
+        }
+
+_____________________________________________________________
+
+HALF THE NUMBER
+***************
+n = n>>1;
+    

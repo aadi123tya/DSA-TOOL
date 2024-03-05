@@ -1,0 +1,32 @@
+Find the smallest and second smallest element in an array
+*********************************************************
+
+
+vector<int> minAnd2ndMin(int a[], int n) {
+    vector<int> ans;
+    priority_queue<int> pq;
+    unordered_map<int,int> m;
+    for(int i=0;i<n;i++)
+    {
+        m[a[i]]++;
+    }
+    
+     unordered_map<int,int>::iterator i;
+    for(i=m.begin();i!=m.end();i++)
+    {
+        int val = i->first;
+        pq.push(val);
+        if(pq.size()>2)pq.pop();
+        
+    }
+    int first =pq.top();
+    pq.pop();
+    int second = pq.top();
+    if(second==first)return {-1};
+    ans.push_back(second);
+    ans.push_back(first);
+    
+    return ans;
+    
+    
+}

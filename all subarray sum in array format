@@ -1,3 +1,9 @@
+time complexity ==> O(n2 + log(n))
+push and pop ==>log(n)
+n2 ===> total Subarray
+
+Brute force approach ==> n2 + nLogn(sort);
+
 class Solution {
 public:
 typedef pair<int , int > P;
